@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LimitKit · Drops and purchase limits for Shopify</title>
-<meta name="description" content="LimitKit locks Shopify products until release time, lets members in first and caps how many each customer buys. Every rule is checked in Shopify's checkout.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="LimitKit locks Shopify products until release time, lets members buy first and caps how many each customer buys. Every rule is checked inside Shopify's checkout, so cart links and express checkout can't get around it.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap">
@@ -13,30 +14,171 @@
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="brand" href="./"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16181d"/><rect x="11" y="20" width="42" height="24" rx="4" fill="#f4f1ea"/><path d="M40 20h9a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4h-9z" fill="#e8571e"/><path d="M40 21v22" stroke="#16181d" stroke-width="1.6" stroke-dasharray="2.4 2.2"/><rect x="16" y="27" width="16" height="3" rx="1.5" fill="#16181d"/><rect x="16" y="34" width="10" height="3" rx="1.5" fill="#16181d"/></svg>LimitKit</a>
-  <nav class="site" aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+  <a class="brand" href="./"><img src="mark.svg" alt="" width="30" height="30">LimitKit</a>
+  <nav class="site" aria-label="Main"><a href="#checkout">Why checkout</a><a href="#features">Features</a><a href="#plans">Plans</a><a href="support.html">Support</a></nav>
 </div></header>
 
 <main><div class="wrap">
-  <p class="eyebrow">Releases and purchase limits for Shopify</p>
-  <h1>Limits that hold at checkout.</h1>
-  <p class="lede">Lock products until release time, let members in first and cap how many each customer buys. Every rule is checked inside Shopify's checkout, so cart links and express checkout can't get around it.</p>
-  <p class="note">Coming soon to the Shopify App Store.</p>
 
-  <div class="ticket" role="img" aria-label="Example release: Winter release, opens Thursday 19 November at 10:00 AEDT, members tagged vip from 09:00, one per customer.">
-    <div class="face">
-      <div class="name">Winter release</div>
-      <div class="when">Opens Thu 19 Nov, 10:00 AEDT</div>
-      <div class="meta">Members tagged vip from 09:00 · Waitlist on</div>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Releases and purchase limits for Shopify</p>
+      <h1>Limits that hold at checkout.</h1>
+      <p class="lede">Lock products until release time, let members buy first and cap how many each customer buys. Every rule is checked inside Shopify's checkout, so cart links, express checkout and the Shop app can't get around it.</p>
+      <p class="note">Coming soon to the Shopify App Store.</p>
     </div>
-    <div class="stub"><b>1</b>each</div>
-  </div>
+    <div class="ticket" role="img" aria-label="Example release: Winter release, opens Thursday 19 November at 10:00, members tagged vip from 09:00, one per customer.">
+      <div class="face">
+        <div class="name">Winter release</div>
+        <div class="when">Opens Thu 19 Nov, 10:00</div>
+        <div class="meta">Members tagged vip from 09:00 · Waitlist on</div>
+      </div>
+      <div class="stub"><b>1</b>each</div>
+    </div>
+  </section>
 
-  <ul class="points">
-    <li><b>Drops</b>Products stay visible but can't be bought until the time you choose, with a countdown on the product page.</li>
-    <li><b>Members first</b>Customers with a tag you choose get early access, per drop or store-wide.</li>
-    <li><b>Purchase limits</b>Per order or per customer across orders. Refunds give the allowance back.</li>
-  </ul>
+  <section id="checkout">
+    <h2>A limit is only as strong as the place it's checked.</h2>
+    <p class="intro">Most launch and limit tools work in your theme. They hide the Add to cart button, grey out the quantity box or run a script on the cart page. That stops shoppers who use the product page. It doesn't stop anyone who reaches checkout another way, and on a busy release, plenty of people do.</p>
+    <div class="table-scroll">
+    <table class="compare">
+      <thead><tr><th scope="col">How the order reaches checkout</th><th scope="col">Rules in the theme</th><th scope="col">LimitKit</th></tr></thead>
+      <tbody>
+        <tr><td>Add to cart on the product page</td><td class="yes">Checked</td><td class="yes">Checked</td></tr>
+        <tr><td>A cart link with the quantity in the address (<code>/cart/variant:5</code>)</td><td class="no">Not checked</td><td class="yes">Checked</td></tr>
+        <tr><td>Express checkout: Shop Pay, Apple Pay, Google Pay</td><td class="no">Not checked</td><td class="yes">Checked</td></tr>
+        <tr><td>The Shop app</td><td class="no">Not checked</td><td class="yes">Checked</td></tr>
+        <tr><td>Scripts and bots adding straight to the cart</td><td class="no">Not checked</td><td class="yes">Checked</td></tr>
+        <tr><td>Quantity raised on the cart page</td><td class="no">Only if the cart script catches it</td><td class="yes">Checked</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>LimitKit runs as a Shopify Function inside Shopify's own checkout, which every order passes through. A shopper who skips the product page still meets your rule before they can pay, with your wording. There's nothing to hide, no theme code to edit and no products to unpublish.</p>
+  </section>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <ul class="features">
+      <li>
+        <span class="tag">Drops</span>
+        <h3>Release products at an exact time</h3>
+        <ul>
+          <li>Schedule a release to the minute, or lock products now and open them by hand.</li>
+          <li>Products stay published, with photos and price, so they can be shared and found before launch.</li>
+          <li>The product page shows when it opens, in each shopper's own timezone, with a live countdown.</li>
+          <li>Badges on collection and search pages show which products open later.</li>
+          <li>Afterwards, see units sold, revenue, orders and sell-through for the drop.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tag">Members first</span>
+        <h3>Early access for the customers you choose</h3>
+        <ul>
+          <li>Pick customer tags, such as <em>vip</em>. Logged-in customers with a matching tag can buy from the members time.</li>
+          <li>Everyone else waits for the public time, or never gets in on a members-only drop.</li>
+          <li>Use one set of tags for the store, or give each drop its own.</li>
+          <li>The app previews what guests, logged-in shoppers and members will see before you switch a drop on.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tag">Purchase limits</span>
+        <h3>Cap how many each customer buys</h3>
+        <ul>
+          <li>Per order, for every shopper, logged in or not.</li>
+          <li>Per customer across all their orders. Shoppers log in to buy, and refunds and cancellations give the allowance back.</li>
+          <li>Over a period, such as per month, and shared across several products.</li>
+          <li>If two checkouts a few seconds apart both get past a per-customer limit, the later order is listed for you to review.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tag">Waitlist</span>
+        <h3>Keep the demand you'd otherwise lose</h3>
+        <ul>
+          <li>While a product is locked, shoppers can leave their email on the product page.</li>
+          <li>See the list in the app and export it as CSV.</li>
+          <li>Send each sign-up to your own tools by webhook, or have LimitKit email everyone once when it goes on sale.</li>
+          <li>Every email has a one-click way off the list.</li>
+        </ul>
+      </li>
+    </ul>
+    <p class="note" style="margin-top:18px">Shoppers never see LimitKit's name: messages use your wording and your theme's styling, and waitlist emails come from your shop.</p>
+  </section>
+
+  <section id="setup">
+    <h2>Set up in a few minutes</h2>
+    <ol class="steps">
+      <li><h3>Install</h3><p>Install from the Shopify App Store. Checkout enforcement switches on by itself.</p></li>
+      <li><h3>Add the product page block</h3><p>One click from the app opens your theme editor with the block ready to add. Collection badges are one more click.</p></li>
+      <li><h3>Create a drop or a limit</h3><p>Choose the products and the times or quantities. Check the shopper preview, then switch it on.</p></li>
+    </ol>
+  </section>
+
+  <section id="plans">
+    <h2>Plans</h2>
+    <p class="intro">Every plan checks every checkout. Paid plans have a 14-day free trial and are billed through your Shopify invoice, so you can change or cancel from your admin.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li>Checkout enforcement on every path</li>
+          <li>Up to 2 active drops</li>
+          <li>Product page block and countdown</li>
+          <li>Per-order limits</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$19 <small>USD / month</small></div>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Up to 15 active drops</li>
+          <li>Members early access (one set of tags)</li>
+          <li>Per-customer limits across orders</li>
+          <li>Waitlist with CSV export</li>
+          <li>Product checks with one-click repair</li>
+        </ul>
+      </div>
+      <div class="plan pick">
+        <h3>Pro</h3>
+        <div class="price">$49 <small>USD / month</small></div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Unlimited drops</li>
+          <li>Each drop's own member tags</li>
+          <li>Limits over periods and across products</li>
+          <li>Waitlist sign-ups to your tools by webhook</li>
+          <li>Full drop results</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Scale</h3>
+        <div class="price">$99 <small>USD / month</small></div>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Waitlist emails when products go on sale</li>
+          <li>Sales export as CSV</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="limits">
+    <h2>What it doesn't do</h2>
+    <ul>
+      <li>It doesn't hold stock for anyone or run a lottery: when a product opens, it's first come, first served within your limits.</li>
+      <li>Per-customer limits need shoppers to log in, because that's how a customer is recognised across orders.</li>
+      <li>Limits are per product, not per variant.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cta">
+      <p><strong>Coming soon to the Shopify App Store.</strong> Questions before then?</p>
+      <p><a href="mailto:support@limitkit.com">support@limitkit.com</a></p>
+    </div>
+  </section>
+
 </div></main>
 
 <footer class="site"><div class="wrap">

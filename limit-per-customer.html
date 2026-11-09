@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Limit quantity per customer on Shopify · LimitKit</title>
+<meta name="description" content="Set a limit of 1 per customer, or any number, per order or across all of a customer's orders. LimitKit checks it inside Shopify's checkout, so cart links and express checkout can't get around it.">
+<link rel="canonical" href="https://limitkit.com/limit-per-customer.html">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css?v=20261109">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="./"><img src="mark.svg" alt="" width="30" height="30">LimitKit</a>
+  <nav class="site" aria-label="Main"><a href="./#checkout">Why checkout</a><a href="./#features">Features</a><a href="./#plans">Plans</a><a href="support.html">Support</a></nav>
+</div></header>
+
+<main>
+
+  <section class="hero-band">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <p class="kicker">Purchase limits</p>
+        <h1>Limit 1 per customer on Shopify, and make it stick.</h1>
+        <p class="lede">Most limit tools hide the quantity box or run a script on the cart page, and shoppers who skip the product page never meet them. LimitKit checks your limit inside Shopify's own cart and checkout, so every order has to pass it.</p>
+        <div class="actions">
+          <a class="btn primary" href="#how">How it works</a>
+          <a class="btn ghost" href="./#plans">Plans and pricing</a>
+        </div>
+        <ul class="trust">
+          <li>Per order or per customer</li>
+          <li>No theme code</li>
+          <li>Billed through Shopify</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <figure class="shot">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="img/limits.jpg" width="1020" height="938" alt="LimitKit's limit settings capping two products at one per customer across all their orders, with a plain-English summary.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Why limits leak</p>
+        <h2>A limit in the theme only stops people who use the theme.</h2>
+        <p class="intro">Resellers and bots rarely use your product page. They use cart links, express checkout or a script that adds straight to the cart. A rule that lives in the theme never sees those orders.</p>
+      </div>
+      <div class="compare-card">
+        <div class="table-scroll">
+          <table class="compare">
+            <thead><tr>
+              <th scope="col">How the order reaches checkout</th>
+              <th scope="col">Rules in the theme</th>
+              <th scope="col" class="us"><span><img src="mark.svg" alt="" width="22" height="22">LimitKit</span></th>
+            </tr></thead>
+            <tbody>
+              <tr><td>A cart link with the quantity in the address (<code>/cart/variant:5</code>)</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
+              <tr><td>Express checkout: Shop Pay, Apple Pay, Google Pay</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
+              <tr><td>Scripts and bots adding straight to the cart</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
+              <tr><td>A second order from the same customer</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="band paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">What you can limit</p>
+        <h2>Set the rule once. Checkout enforces it.</h2>
+      </div>
+      <ul class="points">
+        <li><h3>Per order</h3><p>For every shopper, logged in or not. Adding one too many is refused with your message.</p></li>
+        <li><h3>Per customer, across orders</h3><p>Counts everything a customer has bought, not just this cart. Shoppers log in to buy.</p></li>
+        <li><h3>Refunds give it back</h3><p>Refunded and cancelled items return to the customer's allowance automatically.</p></li>
+        <li><h3>Over a time period</h3><p>Per month, for example, so regulars can come back for more later.</p></li>
+        <li><h3>Shared across products</h3><p>Two colourways, one limit: count several products together.</p></li>
+        <li><h3>Orders to review</h3><p>If two checkouts seconds apart both get past a per-customer limit, the later order is listed for you.</p></li>
+      </ul>
+
+      <article class="feature">
+        <div class="copy">
+          <span class="tag">At checkout</span>
+          <h3>Shoppers see your wording, with the number filled in</h3>
+          <ul class="ticks">
+            <li>The message appears in Shopify's checkout, styled by your checkout settings.</li>
+            <li>Write it your way, for example "You can buy up to {limit} per order."</li>
+            <li>Guests are asked to log in when a per-customer limit applies.</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="img/checkout.jpg" width="1340" height="404" loading="lazy" decoding="async" alt="Shopify checkout refusing an order of three snowboards because customers can buy up to two per order.">
+        </figure>
+      </article>
+
+      <p class="plan-note">Per-order limits are on the Free plan. Per-customer limits start on Starter ($19 a month). Limits over time periods and across products are on Pro ($39 a month). <a href="./#plans">Compare plans</a></p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Questions</p>
+        <h2>Common questions about purchase limits</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Do shoppers need an account?</summary><p>Only for per-customer limits, so LimitKit knows who is buying. Per-order limits work for guests too. When a per-customer limit applies, guests are asked to log in at checkout.</p></details>
+        <details><summary>Does it stop express checkout and the Shop app?</summary><p>Yes. The limit is checked in Shopify's checkout, which Shop Pay, Apple Pay, Google Pay and the Shop app all go through.</p></details>
+        <details><summary>What about orders placed before I add a limit?</summary><p>Counting starts when you add the limit. Earlier orders don't count towards it.</p></details>
+        <details><summary>Will it change my theme?</summary><p>No theme code is edited. An optional block can show the limit on the product page; the rule works without it.</p></details>
+        <details><summary>What happens when a customer returns an item?</summary><p>Refunds and cancellations give the allowance back, so they can buy again up to the limit.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <!-- After App Store approval: point the button at the LimitKit listing. -->
+      <div class="cta">
+        <div>
+          <h2>Coming soon to the Shopify App Store</h2>
+          <p>Questions before then? A person replies, usually within two business days.</p>
+        </div>
+        <a class="btn light" href="mailto:support@limitkit.com">Email support@limitkit.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <a class="brand" href="./"><img src="mark.svg" alt="" width="24" height="24">LimitKit</a>
+  <nav class="guides" aria-label="Guides"><a href="limit-per-customer.html">Limit per customer</a><a href="product-drops.html">Product drops</a><a href="members-early-access.html">Members early access</a></nav>
+  <span>© 2026 LimitKit · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></span>
+</div></footer>
+</body>
+</html>

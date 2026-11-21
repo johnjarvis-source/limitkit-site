@@ -20,7 +20,7 @@
 
 <main class="doc"><div class="wrap">
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 20 November 2026</p>
+  <p class="updated">Last updated 21 November 2026</p>
 
   <p>LimitKit ("the app") is a Shopify app provided by John Jarvis, Tasmania, Australia. This policy explains what the app processes when a merchant installs it on their Shopify store, why, and how it is deleted.</p>
 
@@ -30,7 +30,10 @@
   <h2>What we process about your customers</h2>
   <p>To enforce per-customer purchase limits we receive order events from Shopify and keep, for each order that contains a limited product: the customer ID, order ID and order number, product IDs, quantities and dates.</p>
   <p>To report drop results we keep, for orders that contain products in a drop: product IDs, quantities, amounts and the customer ID.</p>
-  <p>We do not read customer names, email addresses, phone numbers or addresses from Shopify.</p>
+  <p>We do not read customer names, email addresses or phone numbers from Shopify. We read delivery addresses only for per-household limits, as described below.</p>
+
+  <h2>Per-household limits</h2>
+  <p>If a store sets a limit per household, we read the delivery address of each paid order that contains a limited product, and checkout reads the delivery address the shopper enters. We immediately turn the address into a one-way, salted fingerprint that is unique to that store, and keep only the fingerprint, the order ID, product quantities and dates, so we can tell when the same address orders again. We never store the address itself, and we don't read the name, email or phone number on it.</p>
 
   <h2>Waitlist</h2>
   <p>When a shopper joins a waitlist on your store, we store the email address they enter, the product, the wording they agreed to, their language, the time, and their customer ID if they were logged in. We use it only to show the list to you, to send it to tools you connect by webhook, and, if you switch it on, to email them once when the product goes on sale. Every email has a link to leave the list, which deletes their entry.</p>
@@ -46,7 +49,7 @@
   <p>Data is encrypted in transit and at rest.</p>
 
   <h2>Retention and deletion</h2>
-  <p>We keep data while the app is installed. When Shopify asks us to erase a customer's data, we delete their purchase records and waitlist entries and remove their customer ID from drop results. When the app is uninstalled, we delete all store data 48 hours later, when Shopify sends the store erasure request. Records of delivered webhooks are deleted after 30 days.</p>
+  <p>We keep data while the app is installed. When Shopify asks us to erase a customer's data, we delete their purchase records, the address fingerprints from their orders and their waitlist entries, and remove their customer ID from drop results. Address fingerprints are also deleted 30 days after an order stops counting towards a limit, and when the store deletes the limit. When the app is uninstalled, we delete all store data 48 hours later, when Shopify sends the store erasure request. Records of delivered webhooks are deleted after 30 days.</p>
 
   <h2>This website</h2>
   <p>limitkit.com is served through Cloudflare, which also counts page views for us with Cloudflare Web Analytics. It sets no cookies and doesn't identify or follow individual visitors.</p>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Limit quantity per customer on Shopify · LimitKit</title>
-<meta name="description" content="Set a limit of 1 per customer, or any number, per order or across all of a customer's orders. LimitKit checks it inside Shopify's checkout, so cart links and express checkout can't get around it.">
+<meta name="description" content="Set a limit of 1 per customer, or any number, per order, across all of a customer's orders, or per household by delivery address. LimitKit checks it inside Shopify's checkout, so cart links and express checkout can't get around it.">
 <link rel="canonical" href="https://limitkit.com/limit-per-customer.html">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="mark.svg" type="image/svg+xml">
@@ -33,7 +33,7 @@
           <a class="btn ghost" href="#how">How it works</a>
         </div>
         <ul class="trust">
-          <li>Per order or per customer</li>
+          <li>Per order, customer or household</li>
           <li>No theme code</li>
           <li>Billed through Shopify</li>
         </ul>
@@ -67,6 +67,7 @@
               <tr><td>Express checkout: Shop Pay, Apple Pay, Google Pay</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
               <tr><td>Scripts and bots adding straight to the cart</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
               <tr><td>A second order from the same customer</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
+              <tr><td>The same household again, with a new email or as a guest</td><td><span class="mark no"><span class="lbl">Not checked</span></span></td><td class="us"><span class="mark yes"><span class="lbl">Checked</span></span></td></tr>
             </tbody>
           </table>
         </div>
@@ -82,8 +83,8 @@
       </div>
       <ul class="points">
         <li><h3>Per order</h3><p>For every shopper, logged in or not. Adding one too many is refused with your message.</p></li>
-        <li><h3>Per customer, across orders</h3><p>Counts everything a customer has bought, not just this cart. Shoppers log in to buy.</p></li>
-        <li><h3>Refunds give it back</h3><p>Refunded and cancelled items return to the customer's allowance automatically.</p></li>
+        <li><h3>Per customer, across orders</h3><p>Counts everything a customer has bought, not just this cart. Shoppers log in to buy, and refunds give the allowance back.</p></li>
+        <li><h3>Per household</h3><p>One per delivery address, guests included, so a new email address doesn't get a second go.</p></li>
         <li><h3>Over a time period</h3><p>Per month, for example, so regulars can come back for more later.</p></li>
         <li><h3>Shared across products</h3><p>Two colourways, one limit: count several products together.</p></li>
         <li><h3>Orders to review</h3><p>If two checkouts seconds apart both get past a per-customer limit, the later order is listed for you.</p></li>
@@ -105,7 +106,7 @@
         </figure>
       </article>
 
-      <p class="plan-note">Per-order limits are on the Free plan. Per-customer limits start on Starter ($19 a month). Limits over time periods and across products are on Pro ($39 a month). Founding stores: the first 20 stores to install get every Pro feature free for 6 months, then 50% off for as long as they stay subscribed. <a href="./#founding">Founding stores offer</a> · <a href="./#plans">Compare plans</a></p>
+      <p class="plan-note">Per-order limits are on the Free plan. Per-customer and per-household limits start on Starter ($19 a month). Limits over time periods and across products are on Pro ($39 a month). Founding stores: the first 20 stores to install get every Pro feature free for 6 months, then 50% off for as long as they stay subscribed. <a href="./#founding">Founding stores offer</a> · <a href="./#plans">Compare plans</a></p>
     </div>
   </section>
 
@@ -116,7 +117,8 @@
         <h2>Common questions about purchase limits</h2>
       </div>
       <div class="faq">
-        <details><summary>Do shoppers need an account?</summary><p>Only for per-customer limits, so LimitKit knows who is buying. Per-order limits work for guests too. When a per-customer limit applies, guests are asked to log in at checkout.</p></details>
+        <details><summary>Do shoppers need an account?</summary><p>Only for per-customer limits, so LimitKit knows who is buying. Per-order and per-household limits work for guests too. When a per-customer limit applies, guests are asked to log in at checkout.</p></details>
+        <details><summary>How does a per-household limit work?</summary><p>It counts orders by delivery address, so the same household can't get round your limit with a new email address or a guest checkout. Common differences in how an address is written are treated as the same address. LimitKit keeps only a one-way fingerprint of the address, never the address itself. A typo, a made-up unit number, a friend's address or local pickup can still get through, so it stops the common case rather than every case.</p></details>
         <details><summary>Does it stop express checkout and the Shop app?</summary><p>Yes. The limit is checked in Shopify's checkout, which Shop Pay, Apple Pay, Google Pay and the Shop app all go through.</p></details>
         <details><summary>What about orders placed before I add a limit?</summary><p>Counting starts when you add the limit. Earlier orders don't count towards it.</p></details>
         <details><summary>Will it change my theme?</summary><p>No theme code is edited. An optional block can show the limit on the product page; the rule works without it.</p></details>
